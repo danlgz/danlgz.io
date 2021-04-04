@@ -1,0 +1,42 @@
+body
+    section.main
+        margin: 0 auto
+        width: 100%
+        max-width: $content-width
+        display: flex
+        margin-top: $top-space
+
+        .photo
+            width: $img-size
+            height: $img-size
+
+            svg
+                width: 100%
+                height: auto
+                border-radius: $img-radius
+                border: $img-border
+
+        .content
+            margin-left: $normal-text-size
+            display: flex
+            flex-direction: column
+            justify-content: center
+
+            .hello
+                font-size: $normal-text-size
+                color: $main-color
+
+            .name
+                font-size: $big-text-size
+                margin: .5rem 0
+                color: $text-light-color
+
+            .description
+                font-size: $small-text-size
+                text-align: right
+                color: $main-light-color
+
+            .actions
+                display: flex
+                justify-content: space-between
+                margin-top: $tiny-text-size

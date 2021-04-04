@@ -1,0 +1,17 @@
+// :v
+body
+    background-color: $back-light-color
+    font-family: $main-font
+    transition: $default-transition
+
+    &.light-theme
+        background-color: $back-light-color
+
+        section.main .content .name
+            color: $text-light-color
+
+    &.dark-theme
+        background-color: $back-dark-color
+
+        section.main .content .name
+            color: $text-dark-color

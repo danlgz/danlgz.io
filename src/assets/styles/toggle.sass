@@ -1,0 +1,42 @@
+body
+    section.theme
+        width: 100%
+        text-align: center
+        margin: 5rem 0
+
+        .button.toggle
+            position: relative
+            padding: 6px 33px
+
+            input[type=checkbox]
+                visibility: hidden
+                opacity: 0
+
+            span.o
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 25px
+                    height: 25px
+                    background: white
+                    border-radius: $img-radius
+                    transition: $default-transition
+                    top: 4px
+                    transform: translateX(-48px)
+
+                &::before
+                    content: 'Light'
+                    position: absolute
+                    color: white
+                    transition: $default-transition
+                    transform: translateX(-15px)
+
+            input[type=checkbox]:checked + span.o
+                &::after
+                    transform: translateX(3px)
+
+                &::before
+                    content: 'Dark'
+                    position: absolute
+                    color: white
+                    transform: translateX(-40px)

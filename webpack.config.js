@@ -24,14 +24,7 @@ module.exports = {
                     },
                     "css-loader",
                     // Compiles Sass to CSS
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sassOptions: {
-                                indentedSyntax: false,
-                            }
-                        },
-                    }
+                    "sass-loader"
                 ],
             },
             {
