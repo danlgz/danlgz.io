@@ -5,7 +5,7 @@ const path = require('path');
 module.exports = {
     entry: path.resolve(__dirname, 'src/app/scripts/app.js'),
     output: {
-        filename: 'bundle-[fullhash].js',
+        filename: '[fullhash].js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
@@ -50,7 +50,6 @@ module.exports = {
         
                         return '[name].[ext]';
                       },
-                      outputPath: 'images/'
                     }
                   },
                 ],

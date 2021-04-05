@@ -18,7 +18,7 @@ export const readIcons = () => {
 
         if (iconName in ICONS) {
             const i = icon(ICONS[iconName]);
-            if (!!i) $el.appendChild(i.node[0])
+            if (!!i) $el.appendChild(i.node[0]);
         }
     });
 }
