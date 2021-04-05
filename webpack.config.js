@@ -37,6 +37,24 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name(file) {
+                        // if (argv.mode === 'production') {
+                        //   return '[contenthash].[ext]';
+                        // }
+        
+                        return '[name].[ext]';
+                      },
+                      outputPath: 'images/'
+                    }
+                  },
+                ],
+            },
         ],
     },
     plugins: [

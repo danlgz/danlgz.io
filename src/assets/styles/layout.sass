@@ -6,15 +6,25 @@ body
         display: flex
         margin-top: $top-space
 
+        @include responsive-style($medium-screen)
+            margin-top: $top-space / 3
+            flex-direction: column
+            align-items: center
+
         .photo
             width: $img-size
             height: $img-size
-            background-color: $main-light-color
-            border-radius: $img-radius
+            transition: $default-transition
 
-            svg
+            @include responsive-style($medium-screen)
+                width: $img-size / 1.5
+                height: $img-size / 1.3
+
+            img
                 width: 100%
                 height: auto
+                background-color: $main-light-color
+                border-radius: $img-radius
 
         .content
             margin-left: $normal-text-size
@@ -22,21 +32,41 @@ body
             flex-direction: column
             justify-content: center
 
+            @include responsive-style($medium-screen)
+                margin-left: 0
+
             .hello
                 font-size: $normal-text-size
                 color: $main-color
+                @include responsive-style($small-screen)
+                    font-size: $tiny-text-size
 
             .name
                 font-size: $big-text-size
-                margin: .5rem 0
+                margin: 0
                 color: $text-light-color
+
+                @include responsive-style($medium-screen)
+                    font-size: $mid-text-size
+
+                @include responsive-style($small-screen)
+                    font-size: $small-text-size
 
             .description
                 font-size: $small-text-size
                 text-align: right
                 color: $main-light-color
+                @include responsive-style($small-screen)
+                    font-size: $tiny-text-size
 
             .actions
                 display: flex
                 justify-content: space-between
-                margin-top: $tiny-text-size
+                margin-top: $small-text-size
+
+                @include responsive-style($small-screen)
+                    flex-direction: column
+                    align-items: center
+
+                    .button
+                        margin-top: 1rem
