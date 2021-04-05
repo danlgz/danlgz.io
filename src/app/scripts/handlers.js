@@ -27,7 +27,11 @@ export const darkModeChangeHandler = () => {
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
         const $body = document.querySelector('body');
         if (
-            (event.matches && $body.classList.contains(LIGHT_THEME_NAME)) || $body.classList.contains(DARK_THEME_NAME)
+            (
+                event.matches && $body.classList.contains(LIGHT_THEME_NAME)
+            ) || (
+                !event.matches && $body.classList.contains(DARK_THEME_NAME)
+            )
         ) {
             clickToggle();
         }
