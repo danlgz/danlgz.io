@@ -1,8 +1,127 @@
+@mixin hide-icon()
+    transform: scale(0.5)
+    opacity: 0
+    visibility: hidden
+
+@mixin show-icon()
+    transform: scale(1)
+    opacity: 1
+    visibility: visible
+
 body
     section.theme
-        width: 100%
+        width: 80%
+        max-width: $content-width
         text-align: center
-        margin: 5rem 0
+        margin: 5rem auto
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        @include responsive-style($small-screen)
+            width: 90%
+            margin: 2rem auto
+
+        label.selector
+            position: relative
+
+            .actions
+                position: relative
+
+            .options
+                position: absolute
+                top: -10px
+                right: 0
+
+                .option
+                    position: absolute
+                    transition: $default-transition
+                    opacity: 0
+                    visibility: hidden
+                    z-index: 1
+
+                    &.yellow
+                        top: 0
+                        right: 0
+                        transition-delay: $delay-transition-3
+                    
+                    &.blue
+                        top: 0
+                        right: 0
+                        transition-delay: $delay-transition-2
+
+                        svg
+                            color: $blue-color
+
+                        &:hover svg
+                            color: $blue-light-color
+                    
+                    &.red
+                        top: 0
+                        right: 0
+                        transition-delay: $delay-transition-1
+
+                        svg
+                            color: $red-color
+
+                        &:hover svg
+                            color: $red-light-color
+
+            i
+                font-size: $normal-icon-size
+                cursor: pointer
+
+                svg
+                    color: $main-color
+                    transition: $default-transition
+
+                &:hover svg
+                    color: $main-light-color
+
+            i.close, i.open
+                position: absolute
+                z-index: 2
+                top: -10px
+
+            i.close
+                right: 4px
+                svg
+                    @include hide-icon()
+
+            i.open
+                right: 0
+                svg
+                    @include show-icon()
+
+            input[type=checkbox]
+                visibility: hidden
+                opacity: 0
+
+                &:checked
+                    & + .actions
+                        i.close svg
+                            @include show-icon()
+
+                        i.open svg
+                            @include hide-icon()
+                        
+                        .options .option
+                            opacity: 1
+                            visibility: visible
+
+                            &.yellow
+                                top: 0
+                                transform: translateX(-40px)
+                                transition-delay: $delay-transition-1
+                            
+                            &.blue
+                                transform: translate(-40px, 40px)
+                                transition-delay: $delay-transition-2
+                            
+                            &.red
+                                transform: translateY(40px)
+                                transition-delay: $delay-transition-3
+
 
         .button.toggle
             position: relative
@@ -22,7 +141,7 @@ body
                     border-radius: $img-radius
                     transition: $default-transition
                     top: 4px
-                    transform: translateX(-53px)
+                    transform: translateX(-51px)
 
                 &::before
                     content: 'Light'
@@ -33,7 +152,7 @@ body
 
             input[type=checkbox]:checked + span.o
                 &::after
-                    transform: translateX(3px)
+                    transform: translateX(1px)
 
                 &::before
                     content: 'Dark'

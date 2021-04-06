@@ -1,4 +1,4 @@
-import { toggleHandler, darkModeChangeHandler } from './handlers'
+import { toggleHandler, darkModeChangeHandler, closeThemeSelectorHandler, themeSelectorHandler } from './handlers'
 import { readIcons } from './icons'
 import { initilizeDarkmode } from './darkmode'
 
@@ -10,3 +10,5 @@ readIcons();
 initilizeDarkmode();
 darkModeChangeHandler();
 toggleHandler();
+themeSelectorHandler();
+closeThemeSelectorHandler();

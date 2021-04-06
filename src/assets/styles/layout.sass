@@ -1,15 +1,18 @@
 body
     section.main
-        margin: 0 auto
-        width: 100%
-        max-width: $content-width
         display: flex
-        margin-top: $top-space
+        justify-content: center
+        margin: 0 auto
+        width: 80%
+        max-width: $content-width
+        margin-top: $top-space / 3
 
         @include responsive-style($medium-screen)
-            margin-top: $top-space / 3
             flex-direction: column
             align-items: center
+
+        @include responsive-style($small-screen)
+            width: 90%
 
         .photo
             width: $img-size
@@ -24,6 +27,9 @@ body
                 height: auto
                 background-color: $main-light-color
                 border-radius: $img-radius
+                box-sizing: border-box
+                border: 3px solid $main-color
+                transition: color $default-transition
 
         .content
             margin-left: $normal-text-size
@@ -37,6 +43,8 @@ body
             .hello
                 font-size: $normal-text-size
                 color: $main-color
+                transition: color $default-transition
+
                 @include responsive-style($small-screen)
                     font-size: $tiny-text-size
 
@@ -44,6 +52,7 @@ body
                 font-size: $big-text-size
                 margin: 0
                 color: $text-light-color
+                transition: color $default-transition
 
                 @include responsive-style($medium-screen)
                     font-size: $mid-text-size

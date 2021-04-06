@@ -1,5 +1,5 @@
 import { icon } from '@fortawesome/fontawesome-svg-core';
-import { faCloudDownloadAlt, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faCloudDownloadAlt, faEnvelope, faPalette, faTimes, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const ICONS = {
@@ -8,6 +8,9 @@ const ICONS = {
     twitter: faTwitter,
     download: faCloudDownloadAlt,
     envelope: faEnvelope,
+    palette: faPalette,
+    times: faTimes,
+    circle: faCircle,
 }
 
 export const readIcons = () => {

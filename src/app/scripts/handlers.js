@@ -37,3 +37,29 @@ export const darkModeChangeHandler = () => {
         }
     });
 }
+
+
+export const closeThemeSelectorHandler = () => {
+    const $selector = document.querySelector('#selector');
+
+    document.addEventListener('click', () => {
+        if ($selector.checked) $selector.click();
+    });
+
+    document.querySelector('.selector').addEventListener('click', event => event.stopPropagation());
+}
+
+export const themeSelectorHandler = () => {
+    const $body = document.querySelector('body');
+    const $selector = document.querySelector('#selector');
+    const classes = ['blue', 'yellow', 'red']
+
+    document.querySelectorAll('.options i.option').forEach($el => {
+        $el.addEventListener('click', () => {
+            if (!$selector.checked) return;
+
+            $body.classList.remove(...classes);
+            $body.classList.add($el.getAttribute('title'));
+        });
+    });
+}

@@ -1,0 +1,84 @@
+// :v
+body
+    background-color: $back-light-color
+    font-family: $main-font
+    transition: $default-transition
+
+    &.light-theme
+        background-color: $back-light-color
+
+        section.main .content .name
+            color: $text-light-color
+
+    &.dark-theme
+        background-color: $back-dark-color
+
+        section.main .content .name
+            color: $text-dark-color
+
+    // themes
+    &.blue
+        &:not(.dark-theme)
+            background-color: $black-blue-color
+
+        .button
+            background-color: $blue-color
+
+            &:hover
+                background-color: $blue-light-color
+
+        .selector .actions
+            i.open svg, i.close svg
+                color: $blue-color
+
+        .main
+            .content
+                .hello
+                    color: $blue-color
+
+                .description
+                    color: $blue-light-color
+
+            .photo img
+                background-color: $blue-light-color
+                border: 3px solid $blue-color
+
+            .icons a
+                i svg
+                    color: $blue-color
+
+                &:hover i svg
+                    color: $blue-light-color
+
+    &.red
+        &:not(.dark-theme)
+            background-color: $black-red-color
+
+        .button
+            background-color: $red-color
+
+            &:hover
+                background-color: $red-light-color
+
+        .selector .actions
+            i.open svg, i.close svg
+                color: $red-color
+
+        .main
+            .content
+                .hello
+                    color: $red-color
+
+                .description
+                    color: $red-light-color
+
+            .photo img
+                background-color: $red-light-color
+                border: 3px solid $red-color
+
+            .icons a
+                i svg
+                    color: $red-color
+
+                &:hover i svg
+                    color: $red-light-color

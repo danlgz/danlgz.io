@@ -14,10 +14,29 @@
     <meta name="keywords">
     <meta property="og:type" content="website">
 </head>
-<body>
+<body class="blue">
+    <section class="theme">
+        <label class="button toggle" for="toggle-theme">
+            <input type="checkbox" name="toggle-theme" id="toggle-theme">
+            <span class="o"></span>
+        </label>
+        <label class="selector" for="selector">
+            <input type="checkbox" name="selector" id="selector">
+            <span class="actions">
+                <i title="select color" class="close" icon="times"></i>
+                <i title="close" class="open" icon="palette"></i>
+
+                <div class="options">
+                    <i title="yellow" class="option yellow" icon="circle"></i>
+                    <i title="blue" class="option blue" icon="circle"></i>
+                    <i title="red" class="option red" icon="circle"></i>
+                </div>
+            </span>
+        </label>
+    </section>
     <section class="main">
         <div class="photo">
-            <img src="danlgz.png" alt="">
+            <img src="danlgz.png" alt="danlgz">
         </div>
         <div class="content">
             <span class="hello">Hello</span>
@@ -25,31 +44,25 @@
             <span class="description">Web Developer</span>
             <div class="actions">
                 <div class="icons">
-                    <a target="_blank" href="https://github.com/danlgz">
+                    <a title="Github" target="_blank" href="https://github.com/danlgz">
                         <i icon="github"></i>
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/in/danlgz">
+                    <a title="LinkedIn" target="_blank" href="https://www.linkedin.com/in/danlgz">
                         <i icon="linkedIn"></i>
                     </a>
-                    <a target="_blank" href="https://twitter.com/danlgz">
+                    <a title="Twitter" target="_blank" href="https://twitter.com/danlgz">
                         <i icon="twitter"></i>
                     </a>
-                    <a target="_blank" href="mailto:danielalejandro137@gmail.com">
+                    <a title="E-Mail" target="_blank" href="mailto:danielalejandro137@gmail.com">
                         <i icon="envelope"></i>
                     </a>
                 </div>
-                <a class="button" target="_blank" href="https://drive.google.com/file/d/1Qx0V69Vijg-GiPCzsf3GiRGfNLuhujW6/view?usp=sharing">
+                <a title="Download resume" class="button" target="_blank" href="https://drive.google.com/file/d/1Qx0V69Vijg-GiPCzsf3GiRGfNLuhujW6/view?usp=sharing">
                     <i icon="download"></i>
                     <span>Resume</span>
                 </a>
             </div>
         </div>
-    </section>
-    <section class="theme">
-        <label class="button toggle" for="toggle-theme">
-            <input type="checkbox" name="toggle-theme" id="toggle-theme">
-            <span class="o"></span>
-        </label>
     </section>
 </body>
 </html>
