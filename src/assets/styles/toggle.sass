@@ -25,9 +25,6 @@ body
         label.selector
             position: relative
 
-            .actions
-                position: relative
-
             .options
                 position: absolute
                 top: -10px
@@ -125,7 +122,7 @@ body
 
         .button.toggle
             position: relative
-            padding: 6px 33px
+            padding: 8px 35px
 
             input[type=checkbox]
                 visibility: hidden
@@ -140,15 +137,18 @@ body
                     background: white
                     border-radius: $img-radius
                     transition: $default-transition
-                    top: 4px
-                    transform: translateX(-51px)
+                    top: 0
+                    bottom: 0
+                    margin: auto
+                    transform: translateX(-48px)
 
                 &::before
                     content: 'Light'
                     position: absolute
                     color: white
                     transition: $default-transition
-                    transform: translateX(-18px)
+                    top: 6px
+                    transform: translateX(-15px)
 
             input[type=checkbox]:checked + span.o
                 &::after
@@ -156,6 +156,4 @@ body
 
                 &::before
                     content: 'Dark'
-                    position: absolute
-                    color: white
                     transform: translateX(-40px)
