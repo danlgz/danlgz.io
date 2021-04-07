@@ -7,14 +7,16 @@ body
     &.light-theme
         background-color: $back-light-color
 
-        section.main .content .name
-            color: $text-light-color
+        section.main .content
+            .name, p
+                color: $text-light-color
 
     &.dark-theme
         background-color: $back-dark-color
 
-        section.main .content .name
-            color: $text-dark-color
+        section.main .content
+            .name, p
+                color: $text-dark-color
 
     // themes
     &.blue
@@ -28,8 +30,12 @@ body
                 background-color: $blue-light-color
 
         .selector .actions
-            i.open svg, i.close svg
-                color: $blue-color
+            i.open, i.close
+                svg
+                    color: $blue-color
+
+                &:hover svg
+                    color: $blue-light-color
 
         .main
             .content
@@ -38,6 +44,9 @@ body
 
                 .description
                     color: $blue-light-color
+
+                p a
+                    color: $blue-color
 
             .photo img
                 background-color: $blue-light-color
@@ -61,8 +70,12 @@ body
                 background-color: $red-light-color
 
         .selector .actions
-            i.open svg, i.close svg
-                color: $red-color
+            i.open, i.close
+                svg
+                    color: $red-color
+
+                &:hover svg
+                    color: $red-light-color
 
         .main
             .content
@@ -71,6 +84,9 @@ body
 
                 .description
                     color: $red-light-color
+                
+                p a
+                    color: $red-color
 
             .photo img
                 background-color: $red-light-color

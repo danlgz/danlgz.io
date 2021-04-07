@@ -41,7 +41,7 @@ body
                         top: 0
                         right: 0
                         transition-delay: $delay-transition-3
-                    
+
                     &.blue
                         top: 0
                         right: 0
@@ -77,16 +77,22 @@ body
 
             i.close, i.open
                 position: absolute
-                z-index: 2
                 top: -10px
+
+                &:hover svg
+                    color: $main-light-color
 
             i.close
                 right: 4px
+                z-index: 2
+
                 svg
                     @include hide-icon()
 
             i.open
                 right: 0
+                z-index: 3
+
                 svg
                     @include show-icon()
 
@@ -96,11 +102,17 @@ body
 
                 &:checked
                     & + .actions
-                        i.close svg
-                            @include show-icon()
+                        i.close
+                            z-index: 3
 
-                        i.open svg
-                            @include hide-icon()
+                            svg
+                                @include show-icon()
+
+                        i.open
+                            z-index: 2
+
+                            svg
+                                @include hide-icon()
                         
                         .options .option
                             opacity: 1

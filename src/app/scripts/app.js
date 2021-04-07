@@ -1,13 +1,14 @@
 import { toggleHandler, darkModeChangeHandler, closeThemeSelectorHandler, themeSelectorHandler } from './handlers'
 import { readIcons } from './icons'
-import { initilizeDarkmode } from './darkmode'
+import { initializeDarkmode, initializeTheme } from './themes'
 
 import '../../assets/styles/main.sass'
 import '../../assets/images/danlgz.png'
 
 
 readIcons();
-initilizeDarkmode();
+initializeTheme();
+initializeDarkmode();
 darkModeChangeHandler();
 toggleHandler();
 themeSelectorHandler();
